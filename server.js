@@ -159,4 +159,5 @@ app.post("/search-bus", (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on PORT ${PORT}`);
+  console.log(`🌐 CORS enabled for Vercel frontend: mybus-frontend.vercel.app`);
 });
