@@ -13,7 +13,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: '*', // Change to your frontend domain if needed
+  origin: [
+    'https://mybus-frontend.vercel.app',
+    'https://mybus-frontend-96hkiskrq-roshini-senthilkumars-projects.vercel.app',
+    'http://localhost:3000', // For local development
+    'http://localhost:3001'  // Alternative local port
+  ],
   methods: ['GET', 'POST'],
   credentials: true
 }));
